@@ -1,3 +1,4 @@
+# calculadora.py versão 1.0
 # Este programa foi desenvolvido por José Emanuel Sartor em 21/05/2021
 # HavanProLabs
 # Leia o arquivo README antes de executar 
@@ -35,8 +36,10 @@ while True:
         if option == 1:
             break
         else:
-            print('\033[1;33mOpção Inválida\033[m')
+            print('Opção Inválida')
             pass
+print('=' *20)
+print('=' *20)
 while True:
     print('Qual sua moeda de destino?')
     print('[ 0 ] Real')
@@ -45,7 +48,7 @@ while True:
     print('[ 3 ] Libra')
     destino = int(input('Insira sua opção: '))
     if moedaorigem == destino:
-        print('\033[1;31mA moeda de destino não pode ser igual a moeda de origem!\033[m')
+        print('A moeda de destino não pode ser igual a moeda de origem!')
         sleep(3)
         pass
     elif destino == 1 or destino == 2 or destino == 3:
@@ -58,10 +61,10 @@ while True:
         elif option2 == 2:
             pass
         else:
-            print('\033[1;33mOpção Inválida\033[m')
+            print('Opção Inválida')
             pass
     else:
-        print('\033[1;33mOpção Inválida\033[m')
+        print('Opção Inválida')
         pass
 
 BRL = 0
@@ -69,16 +72,19 @@ USD = COTACAO["results"]["currencies"]["USD"]["buy"]
 EUR = COTACAO["results"]["currencies"]["EUR"]["buy"]
 GBP = COTACAO["results"]["currencies"]["GBP"]["buy"]
 lista = [BRL, USD, EUR, GBP]
-
-print('\033[0;97;40mSeja bem vindo a casa de câmbio Muito Dinheiro!')
-print('Como você deseja retirar o seu dinheiro?\033[m')
+print('=' *47)
+print('Seja bem vindo a casa de câmbio Muito Dinheiro!')
+print('Como você deseja retirar o seu dinheiro?')
+print('=' *47)
 print('[ 1 ] Moeda em Espécie')
 print('[ 2 ] Cartão de Viagem')
 print('[ 3 ] Casa de Câmbio')
 option3 = int(input('Insira sua opção: '))
 if option3 == 1:
+    print('=' *32)
     print('Comprar {} em espécie' .format(moedas[destino]))
     print('Cotação atual {}{:.2f} + IOF (1.1%)' .format(sigla[destino], lista[destino]))
+    print('=' *32)
     taxa = '(1.1%)'
     valor = float(input('Insira o valor da compra R$'))
     calc = valor / lista[destino]
@@ -87,8 +93,10 @@ if option3 == 1:
     sleep(2)
     print('Compra aprovada no valor de {}{:.2f} Data: {}/{}/{}' .format(sigla[destino], iof, dia, mes, ano))
 elif option3 == 2:
+    print('=' *32)
     print('Comprar {} no cartão de viagem' .format(moedas[destino]))
     print('Cotação atual {}{:.2f} + IOF (6.38%)' .format(sigla[destino], lista[destino]))
+    print('=' *32)
     taxa = '(6.38%)'
     valor = float(input('Insira o valor da compra R$'))
     calc = valor / lista[destino]
@@ -97,22 +105,29 @@ elif option3 == 2:
     sleep(2)
     print('Compra aprovada no valor de {}{:.2f} Data: {}/{}/{}' .format(sigla[destino], iof, dia, mes, ano))
 elif option3 == 3:
+    print('=' *50)
     print('Comprar {} na casa de câmbio Muito Dinheiro' .format(moedas[destino]))
     print('Cotação atual {}{:.2f} + Taxas (10%)' .format(sigla[destino], lista[destino]))
+    print('=' *50)
     taxa = '(10%)'
     valor = float(input('Insira o valor da compra R$'))
     calc = valor / lista[destino]
     iof = calc + calc * 10 / 100
     print('Sua compra no valor de {}{:.2f} está sendo processada... ' .format(sigla[destino], iof))
     sleep(2)
+    print('☑' *47)
     print('Compra aprovada no valor de {}{:.2f} Data: {}/{}/{}' .format(sigla[destino], iof, dia, mes, ano))
+    print('☑' *47)
 else:
-    print('\033[1;33mOpção Inválida\033[m')
+    print('Opção Inválida')
+print('-=' *19)
 print('Checar o histórico de transações')
 print('[ 1 ] Sim')
 print('[ 2 ] Não')
+print('-=' *9)
 option4 = int(input('Insira sua opção: '))
 if option4 == 1:
+    print('-=' *20)
     print('Ultima operação de câmbio')
     print('Nome do cliente: {}' .format(cliente))
     print('Data: {}/{}/{}' .format(dia, mes, ano))
@@ -121,6 +136,7 @@ if option4 == 1:
     print('Você paga {}{:.2f}' .format(sigla[moedaorigem], valor))
     print('Você recebe {}{:.2f}' .format(sigla[destino], iof))
     print('Taxa cobrada: {}' .format(taxa))
+    print('-=' *20)
 elif option == 2:
     exit()
 else:

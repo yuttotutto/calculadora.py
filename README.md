@@ -3,6 +3,7 @@ calculadora.py versão 1.0
 Este aplicativo necessita ser compilado e
 executado em um terminal rodando Python 3.9
 ============================================
+*Certifique-se de estar conectado a internet
 Os módulos necessários para execução desse
 aplicativo são:
 time
