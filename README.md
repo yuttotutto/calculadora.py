@@ -6,6 +6,11 @@ executado em um terminal rodando Python 3.9
 Caso você não tenha python instalado em seu
 computador:
 link: https://www.python.org/
+
+Se o programa não iniciar
+tente baixar Python 3.9 na Microsoft Store
+link: https://www.microsoft.com/store/productId/9P7QFQMJRFP7
+
 *Certifique-se de estar conectado a internet
 Os módulos necessários para execução desse
 aplicativo são:
@@ -20,6 +25,7 @@ instele-os via pip
 -> pip install datetime
 -> pip install requests
 -> pip install json
+
 Após execução do aplicativo em um terminal Python.
 Siga as instruções apresentadas no terminal...
 Obrigado...
