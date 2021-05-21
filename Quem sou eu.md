@@ -1,0 +1,1 @@
+Olá me chamo José Emanuel Sartor tenho 16 anos sou emancipado e moro em Itapema-SC
