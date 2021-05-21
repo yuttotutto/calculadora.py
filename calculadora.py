@@ -124,7 +124,7 @@ print('-=' *19)
 print('Checar o histórico de transações')
 print('[ 1 ] Sim')
 print('[ 2 ] Não')
-print('-=' *9)
+print('-=' *19)
 option4 = int(input('Insira sua opção: '))
 if option4 == 1:
     print('-=' *20)
